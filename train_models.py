@@ -12,7 +12,7 @@ if not os.path.exists('models'):
     print("Created 'models' directory.")
 
 # --- Load and Prepare Data ---
-df = pd.read_csv('Processed.csv')
+df = pd.read_csv('Updated Processed Diu.csv')
 print("Dataset loaded successfully.")
 
 # --- Preprocessing: We need to convert text columns to numbers ---
@@ -65,5 +65,6 @@ stress_model = LogisticRegression(max_iter=2000)
 stress_model.fit(df[stress_features], df['Stress Label'])
 joblib.dump(stress_model, 'models/stress_model.joblib')
 print("Stress model saved!")
+
 
 print("\n✅ SUCCESS! All models and encoders are ready in the 'models' folder.")
